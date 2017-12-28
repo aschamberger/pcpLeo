@@ -124,6 +124,7 @@ def main():
         # init player state
         if player.mode == "play":
             playing = True
+            pause = False
         elif player.mode == "pause":
             playing = True
             pause = True
