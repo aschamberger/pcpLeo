@@ -70,7 +70,7 @@ def playButtonId(button_id=""):
     id = r[0]["id"].split(".")[1]
     # search for iButton id
     r = searchFavorites(id, button_id)
-    if r[0]:
+    if len (r) > 0:
         # play returned item
         playFavorite(r[0]["id"])
         playing = True
