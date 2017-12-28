@@ -63,15 +63,18 @@ def doVolumeRaise(channel):
     player.volume_up()
 
 def playButtonId(button_id=""):
-    global player
+    global player, playing, active_button
     # search for player name folder in favorites
     r = searchFavorites("", player.name)
     # strip obsolete id from beginning
     id = r[0]["id"].split(".")[1]
     # search for iButton id
     r = searchFavorites(id, button_id)
-    # play returned item
-    playFavorite(r[0]["id"])    
+    if r[0]:
+        # play returned item
+        playFavorite(r[0]["id"])
+        playing = True
+        active_button = button_id
     
 def playFavorite(item_id):
     global player
@@ -88,10 +91,10 @@ def searchFavorites(item_id, search=""):
         if search == "" or search in item['name']:
             favorites.append(item)
     return favorites    
-	
+    
 def main():
-    global player, playing, active_button
-	
+    global player, playing, pause
+    
     # LMSTools
     servers = LMSDiscovery().all()
     logging.debug("LMS host = {}".format(servers[0]["host"]))
@@ -100,7 +103,7 @@ def main():
     logging.debug("MAC ID = {}".format(mac_id))
     player = LMSPlayer(mac_id, server)
     logging.debug("Player name = {}".format(player.name))
-
+    
     # GPIO settings
     GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
@@ -118,6 +121,13 @@ def main():
     GPIO.add_event_detect(pin_volume_raise, GPIO.RISING, callback = doVolumeRaise, bouncetime = 200)
 
     while True:
+        # init player state
+        if player.mode == "play":
+            playing = True
+        elif player.mode == "pause":
+            playing = True
+            pause = True
+
         # status led
         # player ready: led blink slow (2x interval)
         if playing == False and pause == False:
@@ -152,8 +162,6 @@ def main():
             if current_button != active_button:
                 # change track
                 playButtonId(current_button)
-                playing = True
-                active_button = current_button
 
 if __name__ == '__main__':
     try:
