@@ -3,6 +3,10 @@
 A [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) / [piCorePlayer](https://sites.google.com/site/picoreplayer/) based portable music streaming appliance I assembled for my son. 
 Desired playlist is selected via [iButtons](https://datasheets.maximintegrated.com/en/ds/DS1990A.pdf) and playback can be controlled via push buttons.
 
+[![Front](https://raw.githubusercontent.com/aschamberger/pcpLeo/master/img/front.jpg)](https://raw.githubusercontent.com/aschamberger/pcpLeo/master/img/front_full.jpg)
+[![Back](https://raw.githubusercontent.com/aschamberger/pcpLeo/master/img/back.jpg)](https://raw.githubusercontent.com/aschamberger/pcpLeo/master/img/back_full.jpg)
+
+
 ## Parts list
 
 * [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) [[Shop](https://buyzero.de/collections/boards-kits/products/raspberry-pi-zero-w)]
