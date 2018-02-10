@@ -132,7 +132,7 @@ http://www.pighixxx.com/test/2015/06/raspberry-pi-v2-mod-b-pinout/
         ```
         m1
         c1
-        sudo sh -c "sed '/#---End-Custom----------------------------------------/i dtoverlay=w1-gpio,gpiopin=4' config.txt > config.txt"
+        sudo sh -c "sed -i '/#---End-Custom----------------------------------------/i dtoverlay=w1-gpio,gpiopin=4' config.txt"
         ```
     1. Add blacklist entry for *w1-gpio* kernel module in *cmdline.txt* (to prevent loading of *wire* module with [too long] default timing values)
         ```
