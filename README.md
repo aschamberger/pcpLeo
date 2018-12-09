@@ -112,11 +112,11 @@ http://www.pighixxx.com/test/2015/06/raspberry-pi-v2-mod-b-pinout/
 
 ## Installation / Configuration
 
-1. [Download piCorePlayer](http://picoreplayer.sourceforge.net/how_to_download_pcp.shtml)
-1. [Burn piCorePlayer onto a SD card](http://picoreplayer.sourceforge.net/how_to_burn_pcp_onto_a_sd_card.shtml)
-1. [Setup wifi on piCorePlayer without Ethernet](http://picoreplayer.sourceforge.net/how_to_setup_wifi_on_pcp_without_ethernet.shtml)
-1. [Access pCP via default hostname "*piCorePlayer*" or determine your piCorePlayer's IP Address](http://picoreplayer.sourceforge.net/how_to_determine_your_pcp_ip_address.shtml)
-1. [Change pCP operation mode to "*Advanced*"](http://picoreplayer.sourceforge.net/how_to_use_pcp_mode_settings.shtml)
+1. [Download piCorePlayer](https://www.picoreplayer.org/how_to_download_pcp.shtml)
+1. [Burn piCorePlayer onto a SD card](https://www.picoreplayer.org/how_to_burn_pcp_onto_a_sd_card.shtml)
+1. [Setup wifi on piCorePlayer without Ethernet](https://www.picoreplayer.org/how_to_setup_wifi_on_pcp_without_ethernet.shtml)
+1. [Access pCP via default hostname "*piCorePlayer*" or determine your piCorePlayer's IP Address](https://www.picoreplayer.org/how_to_determine_your_pcp_ip_address.shtml)
+1. [Change pCP operation mode to "*Advanced*"](https://www.picoreplayer.org/how_to_use_pcp_mode_settings.shtml)
 1. Configuration changes via web interface
     1. Expand SD card in "*Main Page*" via Button "*Resize FS*"
     1. Install extensions in "*Main Page*" via Button "*Extensions*"
@@ -126,9 +126,9 @@ http://www.pighixxx.com/test/2015/06/raspberry-pi-v2-mod-b-pinout/
 	1. Change "*Name of your player*" to your desired "*<player_name>*" in "*Squeezelite Settings*"
     1. Set "*Power On/Off GPIO*" to "*16*" and toggle "*Active High*" for muting the MiniAMP in "*Squeezelite Settings*"
     1. Change "*Host name*" to your desired "*<player_name>*" in "*Tweaks*"
-1. [Access piCorePlayer via ssh](http://picoreplayer.sourceforge.net/how_to_access_pcp_via_ssh.shtml)
+1. [Access piCorePlayer via ssh](https://www.picoreplayer.org/how_to_access_pcp_via_ssh.shtml)
 1. Configuration changes via console
-    1. Add device tree overlay for 1-Wire in *[config.txt](http://picoreplayer.sourceforge.net/how_to_edit_config_txt.shtml)*:
+    1. Add device tree overlay for 1-Wire in *[config.txt](https://www.picoreplayer.org/how_to_edit_config_txt.shtml)*:
         ```
         m1
         c1
